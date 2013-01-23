@@ -1,0 +1,31 @@
+header {
+  h1 {
+    margin: 20px auto;
+    width: 334px;
+    height: 252px;
+    background: url(/img/gemCityJS.jpg) no-repeat;
+    text-indent: -9999px;
+  }
+}
+
+section {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+input {
+  display: block;
+  margin: 1em auto 2em;
+  width: 70%;
+}
+
+input[type=submit] {
+  width: auto;
+
+  &:hover {
+    background: #f1582e;
+    border-width: 1px;
+    margin-top: -1px;
+  }
+}

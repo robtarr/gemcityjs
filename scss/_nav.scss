@@ -1,0 +1,32 @@
+// nav {
+//   position: absolute;
+//   top: 105px;
+//   left: 10%;
+//   width: 80%;
+
+//   ul {
+//     padding: 0;
+//     width: 100%;
+//     list-style-type: none;
+//   }
+//   li {
+//     @include rem( width, 14 );
+//     background: $navItemBackground;
+
+//     &:first-child {
+//       float: left;
+//     }
+//     &:last-child {
+//       float: right;
+//     }
+
+//     a {
+//       @include rem( font, 2 );
+//       display: block;
+//       color: $navTextColor;
+//       text-align: center;
+//       text-decoration: none;
+//       @include rem( padding, .4 );
+//     }
+//   }
+// }
