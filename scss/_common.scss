@@ -37,15 +37,25 @@ form {
   margin-top: 2em;
 }
 
+input[type=email] {
+  color: #323232;
+  font-size: 2em;
+  padding: 0.2em;
+  max-width: 20em;
+  margin-bottom: 1em;
+}
+
 input[type=submit] {
   width: auto;
   border-radius: 5px;
+  border-width: 0;
   color: #555;
+  font-size: 1.2em;
+  padding: .2em;
 
   &:hover {
-    background: #f1582e;
-    border-width: 1px;
-    margin-top: -1px;
+    background-color: #f1582e;
+    color: #fff;
   }
 }
 
