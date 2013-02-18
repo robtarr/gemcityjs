@@ -1,4 +1,5 @@
 body {
+  background: url(/img/sd/background.jpg);
   margin: 0;
   padding: 0;
 }
@@ -32,26 +33,9 @@ article {
     font-weight: lighter;
     @include rem( 'font-size', 1.3 );
     @include rem( 'padding', .4 );
-    position: relative;
     margin: 0 auto;
     @include rem( 'width', 18 );
-    
-    &:after,
-    &:before {
-      content: "";
-      border-style: solid;
-      @include rem( 'border-width', 1.32 );
-      position: absolute;
-      top: 0;
-    }
-    &:after {
-      border-color: transparent transparent transparent $articleHeadingBackground;
-      @include rem( 'right', -2.3 );
-    }
-    &:before {
-      border-color: transparent $articleHeadingBackground transparent transparent;
-      @include rem( 'left', -2.3 );
-    }
+    @include pointy-box( 2.3, .49, $articleHeadingBackground );
   }
   
   time {
@@ -66,76 +50,40 @@ article {
   }
 }
 
-.next article:first-child {
-  background: url(/img/sd/grid.png);
-  @include single-box-shadow(); //$color, $hoff, $voff, $blur, $spread, $inset
+.upcoming {
+  
+  article:first-child {
+    background: url(/img/sd/grid.png);
+    @include single-box-shadow(); //$color, $hoff, $voff, $blur, $spread, $inset
 
-  h1 {
-    @include rem( 'width', 13 );
-    position: relative;
-    @include transform( translate( 0, -1.2rem ) );
+    h1 {
+      background-color: $nextMeetingHeadingBackground;
+      @include rem( 'width', 13 );
+      @include transform( translate( 0, -1.2rem ) );
+      
+      &:before {
+        border-color: transparent $nextMeetingHeadingBackground transparent transparent;
+      }
+      &:after {
+        border-color: transparent transparent transparent$nextMeetingHeadingBackground;
+      }
+    }
   }
 }
 
-
-
-// .speaker {
-//   color: #00bbf6;
-//   text-decoration: none;
-// }
-
-// time {
-//   font-size: 2em;
-//   display: block;
-//   margin-bottom: .2em;
-// }
-// section {
-//   margin: 0 auto;
-//   width: 80%;
-//   text-align: center;
+.past {
+  background: rgba( #000, .12 );
   
-//   h1 {
-//     margin-bottom: 0;
-//   }
-//   h2 {
-//     margin-top: .2em;
-//   }
-// }
-
-// input {
-//   display: block;
-//   margin: 1em auto 2em;
-//   width: 70%;
-//   text-align: center;
-// }
-
-// form {
-//   margin-top: 2em;
-// }
-
-// input[type=email] {
-//   color: #323232;
-//   font-size: 2em;
-//   padding: 0.2em;
-//   max-width: 20em;
-//   margin-bottom: 1em;
-// }
-
-// input[type=submit] {
-//   width: auto;
-//   border-radius: 5px;
-//   border-width: 0;
-//   color: #555;
-//   font-size: 1.2em;
-//   padding: .4em .8em;
-
-//   &:hover {
-//     background-color: #f1582e;
-//     color: #fff;
-//   }
-// }
-
-// iframe {
-//   width: 100%;
-//   height: 350px;
-// }
+  h1 {
+    background: $prevMeetingHeadingBackground;
+    color: $prevMeetingHeadingTest;
+    text-transform: uppercase;
+    @include rem( 'width', 11 );
+    @include rem( 'font-size', .7 );
+    @include rem( 'padding', .6 );
+    text-align: center;
+    margin: 0 auto;
+    @include pointy-box( 2, .3, $prevMeetingHeadingBackground );
+    @include transform( translate( 0, -1.2rem ) );
+  }
+}
