@@ -1,9 +1,16 @@
 footer {
+  background: $footerBackground;
+  color: $footerText;
+  float: left;
   text-align: center;
+  
+  h2 {
+    text-transform: uppercase;
+  }
 }
 
 .twitter {
-  background: url(../img/twitter.png) no-repeat;
+  background: url(../img/twitter.svg) no-repeat;
   display: block;
   height: 45px;
   width: 45px;

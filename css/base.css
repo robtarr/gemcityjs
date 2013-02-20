@@ -1,3 +1,47 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("/fonts/icomoon.eot");
+  src: url("/fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("/fonts/icomoon.woff") format("woff"), url("/fonts/icomoon.ttf") format("truetype"), url("/fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 13, ../scss/_fonts.scss */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+/* line 28, ../scss/_fonts.scss */
+.icon-github:before, .icon-sparkbox:before, .icon-twitter:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 36, ../scss/_fonts.scss */
+.icon-github:before {
+  content: "\e002"; }
+
+/* line 39, ../scss/_fonts.scss */
+.icon-sparkbox:before {
+  content: "\e003"; }
+
+/* line 42, ../scss/_fonts.scss */
+.icon-twitter:before {
+  content: "\e004"; }
+
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -348,24 +392,30 @@ table {
   border-spacing: 0; }
 
 /* line 1, ../scss/_common.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 7, ../scss/_common.scss */
 body {
   background: url(/img/sd/background.jpg);
   margin: 0;
   padding: 0; }
 
-/* line 7, ../scss/_common.scss */
+/* line 13, ../scss/_common.scss */
 header {
   background: #e0562f url(/img/sd/dayton-map-overlay.png) no-repeat;
   margin-bottom: -51.2px;
   margin-bottom: -3.2rem; }
-  /* line 11, ../scss/_common.scss */
+  /* line 17, ../scss/_common.scss */
   header h1 {
     margin: 0 auto;
     width: 334px;
     height: 252px;
     background: url(/img/sd/gemCityJS-white.png) no-repeat 50% 50px;
     text-indent: -9999px; }
-  /* line 19, ../scss/_common.scss */
+  /* line 25, ../scss/_common.scss */
   header p {
     font-size: 32px;
     font-size: 2rem;
@@ -373,124 +423,145 @@ header {
     padding-bottom: 4rem;
     text-align: center; }
 
-/* line 26, ../scss/_common.scss */
+/* line 32, ../scss/_common.scss */
 article {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  margin-bottom: 3rem;
+  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
   text-align: center; }
-  /* line 29, ../scss/_common.scss */
+  /* line 38, ../scss/_common.scss */
   article h1 {
     background: #e0562f;
     color: white;
     text-align: center;
     font-weight: lighter;
-    font-size: 20.8px;
-    font-size: 1.3rem;
-    padding: 6.4px 6.4px 6.4px 6.4px;
-    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    font-size: 20px;
     margin: 0 auto;
-    width: 288px;
-    width: 18rem;
-    position: relative; }
-    /* line 39, ../scss/_mixins.scss */
+    width: 209px;
+    position: relative;
+    height: 36px;
+    line-height: 36px; }
+    /* line 41, ../scss/_mixins.scss */
     article h1:after, article h1:before {
       content: "";
       border-style: solid;
-      border-width: 21.12px;
-      border-width: 1.32rem;
+      border-width: 18px;
       position: absolute;
       top: 0; }
-    /* line 46, ../scss/_mixins.scss */
+    /* line 48, ../scss/_mixins.scss */
     article h1:after {
       border-color: transparent transparent transparent #e0562f;
-      right: -36.8px;
-      right: -2.3rem; }
-    /* line 50, ../scss/_mixins.scss */
+      right: -36px; }
+    /* line 52, ../scss/_mixins.scss */
     article h1:before {
       border-color: transparent #e0562f transparent transparent;
-      left: -36.8px;
-      left: -2.3rem; }
-  /* line 41, ../scss/_common.scss */
+      left: -36px; }
+  /* line 49, ../scss/_common.scss */
   article time {
     font-size: 25.6px;
     font-size: 1.6rem;
     display: block;
     margin-top: 10px; }
-  /* line 47, ../scss/_common.scss */
+  /* line 55, ../scss/_common.scss */
   article p {
     font-size: 28.8px;
     font-size: 1.8rem;
+    margin: 8px 8px 8px 8px;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     color: #e0562f; }
 
-/* line 55, ../scss/_common.scss */
-.upcoming article:first-child {
-  background: url(/img/sd/grid.png);
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333; }
-  /* line 59, ../scss/_common.scss */
-  .upcoming article:first-child h1 {
-    background-color: #231f20;
-    width: 208px;
-    width: 13rem;
-    -webkit-transform: translate(0, -1.2rem);
-    -moz-transform: translate(0, -1.2rem);
-    -ms-transform: translate(0, -1.2rem);
-    -o-transform: translate(0, -1.2rem);
-    transform: translate(0, -1.2rem); }
-    /* line 64, ../scss/_common.scss */
-    .upcoming article:first-child h1:before {
-      border-color: transparent #231f20 transparent transparent; }
-    /* line 67, ../scss/_common.scss */
-    .upcoming article:first-child h1:after {
-      border-color: transparent transparent transparent #231f20; }
+/* line 64, ../scss/_common.scss */
+.upcoming article {
+  background: white;
+  width: 80%; }
+  /* line 68, ../scss/_common.scss */
+  .upcoming article h1 {
+    -webkit-transform: translate(0, -18px);
+    -moz-transform: translate(0, -18px);
+    -ms-transform: translate(0, -18px);
+    -o-transform: translate(0, -18px);
+    transform: translate(0, -18px);
+    text-transform: uppercase; }
+  /* line 73, ../scss/_common.scss */
+  .upcoming article:first-child {
+    background: transparent url(/img/sd/grid.png);
+    -webkit-box-shadow: 0px 0px 5px #333333;
+    -moz-box-shadow: 0px 0px 5px #333333;
+    box-shadow: 0px 0px 5px #333333;
+    width: auto; }
+    /* line 78, ../scss/_common.scss */
+    .upcoming article:first-child h1 {
+      background-color: #231f20; }
+      /* line 81, ../scss/_common.scss */
+      .upcoming article:first-child h1:before {
+        border-color: transparent #231f20 transparent transparent; }
+      /* line 84, ../scss/_common.scss */
+      .upcoming article:first-child h1:after {
+        border-color: transparent transparent transparent #231f20; }
 
-/* line 74, ../scss/_common.scss */
+/* line 92, ../scss/_common.scss */
 .past {
   background: rgba(0, 0, 0, 0.12); }
-  /* line 77, ../scss/_common.scss */
+  /* line 95, ../scss/_common.scss */
   .past h1 {
     background: #7d7d7d;
     color: white;
+    font-size: 12px;
     text-transform: uppercase;
-    width: 176px;
-    width: 11rem;
-    font-size: 11.2px;
-    font-size: 0.7rem;
-    padding: 9.6px 9.6px 9.6px 9.6px;
-    padding: 0.6rem 0.6rem 0.6rem 0.6rem;
     text-align: center;
     margin: 0 auto;
+    width: 209px;
+    -webkit-transform: translate(0, -10px);
+    -moz-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+    -o-transform: translate(0, -10px);
+    transform: translate(0, -10px);
     position: relative;
-    -webkit-transform: translate(0, -1.2rem);
-    -moz-transform: translate(0, -1.2rem);
-    -ms-transform: translate(0, -1.2rem);
-    -o-transform: translate(0, -1.2rem);
-    transform: translate(0, -1.2rem); }
-    /* line 39, ../scss/_mixins.scss */
+    height: 20px;
+    line-height: 20px; }
+    /* line 41, ../scss/_mixins.scss */
     .past h1:after, .past h1:before {
       content: "";
       border-style: solid;
-      border-width: 22.4px;
-      border-width: 1.4rem;
+      border-width: 10px;
       position: absolute;
       top: 0; }
-    /* line 46, ../scss/_mixins.scss */
+    /* line 48, ../scss/_mixins.scss */
     .past h1:after {
       border-color: transparent transparent transparent #7d7d7d;
-      right: -32px;
-      right: -2rem; }
-    /* line 50, ../scss/_mixins.scss */
+      right: -20px; }
+    /* line 52, ../scss/_mixins.scss */
     .past h1:before {
       border-color: transparent #7d7d7d transparent transparent;
-      left: -32px;
-      left: -2rem; }
+      left: -20px; }
+  /* line 107, ../scss/_common.scss */
+  .past article {
+    border-bottom: 1px solid #7d7d7d;
+    padding-bottom: 48px;
+    padding-bottom: 3rem; }
+    /* line 111, ../scss/_common.scss */
+    .past article:last-child {
+      border: none;
+      margin-bottom: 0; }
+    /* line 116, ../scss/_common.scss */
+    .past article time, .past article p, .past article a {
+      color: #231f20; }
 
 /* line 1, ../scss/_footer.scss */
 footer {
+  background: #323232;
+  color: white;
+  float: left;
   text-align: center; }
+  /* line 7, ../scss/_footer.scss */
+  footer h2 {
+    text-transform: uppercase; }
 
-/* line 5, ../scss/_footer.scss */
+/* line 12, ../scss/_footer.scss */
 .twitter {
-  background: url(../img/twitter.png) no-repeat;
+  background: url(../img/twitter.svg) no-repeat;
   display: block;
   height: 45px;
   width: 45px;

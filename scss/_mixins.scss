@@ -32,23 +32,25 @@ $base-font-size: $base-font-multiplier * 100%;
   }
 }
 
-@mixin pointy-box( $height, $vertPadding, $color ) {
+@mixin pointy-box( $height, $color ) {
   position: relative;
-
+  height: $height;
+  line-height: $height;
+  
   &:after,
   &:before {
     content: "";
     border-style: solid;
-    @include rem( 'border-width', $height - ( $vertPadding * 2 ) );
+    border-width: $height / 2;
     position: absolute;
     top: 0;
   }
   &:after {
     border-color: transparent transparent transparent $color;
-    @include rem( 'right', -1 * $height );
+    right: -1 * $height;
   }
   &:before {
     border-color: transparent $color transparent transparent;
-    @include rem( 'left', -1 * $height );
+    left: -1 * $height;
   }
 }
