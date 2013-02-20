@@ -398,24 +398,35 @@ table {
   box-sizing: border-box; }
 
 /* line 7, ../scss/_common.scss */
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 18, ../scss/_common.scss */
 body {
   background: url(/img/sd/background.jpg);
   margin: 0;
   padding: 0; }
 
-/* line 13, ../scss/_common.scss */
+/* line 24, ../scss/_common.scss */
 header {
   background: #e0562f url(/img/sd/dayton-map-overlay.png) no-repeat;
   margin-bottom: -51.2px;
   margin-bottom: -3.2rem; }
-  /* line 17, ../scss/_common.scss */
+  /* line 28, ../scss/_common.scss */
   header h1 {
     margin: 0 auto;
     width: 334px;
     height: 252px;
     background: url(/img/sd/gemCityJS-white.png) no-repeat 50% 50px;
     text-indent: -9999px; }
-  /* line 25, ../scss/_common.scss */
+  /* line 36, ../scss/_common.scss */
   header p {
     font-size: 32px;
     font-size: 2rem;
@@ -423,7 +434,7 @@ header {
     padding-bottom: 4rem;
     text-align: center; }
 
-/* line 32, ../scss/_common.scss */
+/* line 43, ../scss/_common.scss */
 article {
   margin: 0 auto;
   margin-bottom: 48px;
@@ -431,7 +442,7 @@ article {
   padding-bottom: 24px;
   padding-bottom: 1.5rem;
   text-align: center; }
-  /* line 38, ../scss/_common.scss */
+  /* line 49, ../scss/_common.scss */
   article h1 {
     background: #e0562f;
     color: white;
@@ -458,13 +469,13 @@ article {
     article h1:before {
       border-color: transparent #e0562f transparent transparent;
       left: -36px; }
-  /* line 49, ../scss/_common.scss */
+  /* line 60, ../scss/_common.scss */
   article time {
     font-size: 25.6px;
     font-size: 1.6rem;
     display: block;
     margin-top: 10px; }
-  /* line 55, ../scss/_common.scss */
+  /* line 66, ../scss/_common.scss */
   article p {
     font-size: 28.8px;
     font-size: 1.8rem;
@@ -472,11 +483,11 @@ article {
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     color: #e0562f; }
 
-/* line 64, ../scss/_common.scss */
+/* line 75, ../scss/_common.scss */
 .upcoming article {
   background: white;
   width: 80%; }
-  /* line 68, ../scss/_common.scss */
+  /* line 79, ../scss/_common.scss */
   .upcoming article h1 {
     -webkit-transform: translate(0, -18px);
     -moz-transform: translate(0, -18px);
@@ -484,27 +495,27 @@ article {
     -o-transform: translate(0, -18px);
     transform: translate(0, -18px);
     text-transform: uppercase; }
-  /* line 73, ../scss/_common.scss */
+  /* line 84, ../scss/_common.scss */
   .upcoming article:first-child {
     background: transparent url(/img/sd/grid.png);
     -webkit-box-shadow: 0px 0px 5px #333333;
     -moz-box-shadow: 0px 0px 5px #333333;
     box-shadow: 0px 0px 5px #333333;
     width: auto; }
-    /* line 78, ../scss/_common.scss */
+    /* line 89, ../scss/_common.scss */
     .upcoming article:first-child h1 {
       background-color: #231f20; }
-      /* line 81, ../scss/_common.scss */
+      /* line 92, ../scss/_common.scss */
       .upcoming article:first-child h1:before {
         border-color: transparent #231f20 transparent transparent; }
-      /* line 84, ../scss/_common.scss */
+      /* line 95, ../scss/_common.scss */
       .upcoming article:first-child h1:after {
         border-color: transparent transparent transparent #231f20; }
 
-/* line 92, ../scss/_common.scss */
+/* line 103, ../scss/_common.scss */
 .past {
   background: rgba(0, 0, 0, 0.12); }
-  /* line 95, ../scss/_common.scss */
+  /* line 106, ../scss/_common.scss */
   .past h1 {
     background: #7d7d7d;
     color: white;
@@ -536,16 +547,16 @@ article {
     .past h1:before {
       border-color: transparent #7d7d7d transparent transparent;
       left: -20px; }
-  /* line 107, ../scss/_common.scss */
+  /* line 118, ../scss/_common.scss */
   .past article {
     border-bottom: 1px solid #7d7d7d;
     padding-bottom: 48px;
     padding-bottom: 3rem; }
-    /* line 111, ../scss/_common.scss */
+    /* line 122, ../scss/_common.scss */
     .past article:last-child {
       border: none;
       margin-bottom: 0; }
-    /* line 116, ../scss/_common.scss */
+    /* line 127, ../scss/_common.scss */
     .past article time, .past article p, .past article a {
       color: #231f20; }
 
@@ -558,13 +569,14 @@ footer {
   /* line 7, ../scss/_footer.scss */
   footer h2 {
     text-transform: uppercase; }
-
-/* line 12, ../scss/_footer.scss */
-.twitter {
-  background: url(../img/twitter.svg) no-repeat;
-  display: block;
-  height: 45px;
-  width: 45px;
-  margin: 0 auto;
-  color: #444;
-  text-indent: -9999px; }
+  /* line 13, ../scss/_footer.scss */
+  footer .icon-twitter,
+  footer .icon-github,
+  footer .icon-sparkbox {
+    text-decoration: none; }
+    /* line 16, ../scss/_footer.scss */
+    footer .icon-twitter:before,
+    footer .icon-github:before,
+    footer .icon-sparkbox:before {
+      color: #e0562f;
+      font-size: 35px; }
