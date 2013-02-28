@@ -1,131 +1,25 @@
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-body {
-  background: url(/img/sd/background.jpg);
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: $headerBackground url(/img/sd/dayton-map-overlay.png) no-repeat;
-  @include rem( margin-bottom, -3.2 );
-  
-  h1 {
-    margin: 0 auto;
-    width: 334px;
-    height: 252px;
-    background: url(/img/sd/gemCityJS-white.png) no-repeat 50% 50px;
-    text-indent: -9999px;
+@include my-base {
+  * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  
-  p {
-    @include rem( font-size, 2 );
-    @include rem( padding-bottom, 4 );
-    text-align: center;
-  }
-}
 
-article {
-  margin: 0 auto;
-  @include rem( margin-bottom, 3 );
-  @include rem( padding-bottom, 1.5 );
-  text-align: center;
-  
-  h1 {
-    background: $articleHeadingBackground;
-    color: $articleHeadingText;
-    text-align: center;
-    font-weight: lighter;
-    font-size: 20px;
-    margin: 0 auto;
-    width: 209px;
-    @include pointy-box( 36px, $articleHeadingBackground );
+  .hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
-  
-  time {
-    @include rem( 'font-size', 1.6 );
-    display: block;
-    margin-top: 10px;
-  }
-  
-  p {
-    @include rem( font-size, 1.8 );
-    @include rem( margin, .5 );
-    color: $presenterText;
-  }
-}
 
-.upcoming {
-  
-  article {
-    background: $articleBackground;
-    width: 80%;
-    
-    h1 {
-      @include transform( translate( 0, -18px ) );
-      text-transform: uppercase;
-    }
-    
-    &:first-child {
-      background: transparent url(/img/sd/grid.png);
-      @include single-box-shadow(); //$color, $hoff, $voff, $blur, $spread, $inset
-      width: auto;
-
-      h1 {
-        background-color: $nextMeetingHeadingBackground;
-        
-        &:before {
-          border-color: transparent $nextMeetingHeadingBackground transparent transparent;
-        }
-        &:after {
-          border-color: transparent transparent transparent$nextMeetingHeadingBackground;
-        }
-      }
-    }
-  }
-}
-
-.past {
-  background: rgba( #000, .12 );
-  
-  h1 {
-    background: $prevMeetingHeadingBackground;
-    color: $prevMeetingHeadingTest;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 auto;
-    width: 209px;
-    @include transform( translate( 0, -10px ) );
-    @include pointy-box( 20px, $prevMeetingHeadingBackground );
-  }
-  
-  article {
-    border-bottom: 1px solid $prevMeetingBorder;
-    @include rem( padding-bottom, 3 );
-
-    &:last-child {
-      border: none;
-      margin-bottom: 0;
-    }
-
-    time, p, a {
-      color: $prevMeetingText;
-    }
+  body {
+    background: url(/img/sd/background.jpg);
+    font-family: 'museo-slab', serif;
+    margin: 0;
+    padding: 0;
   }
 }

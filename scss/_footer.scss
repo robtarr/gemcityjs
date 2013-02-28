@@ -1,32 +1,56 @@
-footer {
-  background: $footerBackground;
-  color: $footerText;
-  float: left;
-  text-align: center;
-  
-  h2 {
-    text-transform: uppercase;
-  }
-  
-  .icon-twitter,
-  .icon-github,
-  .icon-sparkbox {
-    text-decoration: none;
-        
-    &:before {
-      color: $trackUs;
-      font-size: 35px;
+@include my-base {
+  footer {
+    background: $footerBackground;
+    color: $footerText;
+    float: left;
+    // text-align: center;
+    width: 100%;
+    padding: 0 5%;
+      
+    h2 {
+      text-transform: uppercase;
+      @include rem( font-size, .9 );
+      @include rem( margin-top, 4 );
+    }
+    
+    p {
+      @include rem( font-size, 1.6 );
+      font-weight: 100;
+    }
+    
+    .icon-twitter,
+    .icon-github,
+    .icon-sparkbox {
+      text-decoration: none;
+          
+      &:before {
+        color: $trackUs;
+        display: inline-block;
+        font-size: 45px;
+        margin: 10px 10px 0;
+      }
     }
   }
   
+  .vcard {
+    @include rem( font-size, 1.6 );
+    font-weight: 100;
+    color: $vcardText;
+  }
+  
+  .map {
+    width: 100%;
+    min-height: 35%;
+    @include rem( margin-bottom, 4 );
+  }
 }
 
-// .twitter {
-//   display: block;
-//   height: 45px;
-//   width: 45px;
-//   margin: 0 auto;
-//   color: #444;
-//   text-indent: -9999px;
-// }
-
+@include my-media("(min-width: 40em)") {
+  footer {
+    .column {
+      float: left;
+      padding: 0 5%;
+      width: 50%;
+    }
+  }
+}

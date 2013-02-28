@@ -1,0 +1,16 @@
+@mixin my-base {
+  // never serve the base styles to old IE
+  // (it will already receive this in mq.css)
+  // note, SCSS won't compile unless you use @content
+  @if false {
+    @content;
+  }
+}
+ 
+@mixin my-media($theQuery, $serveToOldIE: true) {
+  // allows us to exclude queries from old IE
+  // by passing "false"
+  @if $serveToOldIE {
+    @content;
+  }
+}

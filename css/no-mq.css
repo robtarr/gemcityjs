@@ -1,0 +1,11 @@
+/* line 99, ../scss/_listing.scss */
+.upcoming article, .past article {
+  float: left;
+  margin: 50px 5%;
+  width: 40%; }
+
+/* line 50, ../scss/_footer.scss */
+footer .column {
+  float: left;
+  padding: 0 5%;
+  width: 50%; }
