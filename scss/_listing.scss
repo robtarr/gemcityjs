@@ -95,11 +95,27 @@
 }
 
 @include my-media("(min-width: 40em)") {
-  .upcoming, .past {
+  .upcoming {
     article {
+      border: none;
       float: left;
       margin: 50px 5%;
       width: 40%;
+    }
+  }
+  
+  .past {
+    article {
+      border-bottom: none;
+      float: left;
+      margin: 50px 0;
+      padding-right: 5%;
+      padding-left: 5%;
+      width: 50%;
+      
+      &:nth-child(2n) {
+        border-right: 1px solid $prevMeetingBorder;
+      }
     }
   }
 }
