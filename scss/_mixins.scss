@@ -48,7 +48,7 @@ $base-font-size: $base-font-multiplier * 100%;
     font-weight: normal;
     line-height: 1;
     position: absolute;
-    top: 0;
+    top: -1px;
     -webkit-font-smoothing: none;
   }
   &:after {
@@ -57,6 +57,6 @@ $base-font-size: $base-font-multiplier * 100%;
   }
   &:before {
     content: "\e003";
-    left: -1 * $height / 1.55;
+    left: -1 * $height / 1.6;
   }
 }

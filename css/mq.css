@@ -12,6 +12,8 @@
   content: attr(data-icon);
   speak: none;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
@@ -21,8 +23,8 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-/* line 50, ../scss/_fonts.scss */
-.icon-github:before, .icon-sparkbox:before, .icon-twitter:before {
+/* line 52, ../scss/_fonts.scss */
+.icon-sparkbox:before, .icon-twitter:before, .icon-github:before, .icon-box-end:before, .icon-box-end-2:before, .icon-video:before, .icon-photo:before {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -30,17 +32,33 @@ you can use the generic selector below, but it's slower:
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
-/* line 58, ../scss/_fonts.scss */
+/* line 60, ../scss/_fonts.scss */
 .icon-github:before {
   content: "\e000"; }
 
-/* line 61, ../scss/_fonts.scss */
+/* line 63, ../scss/_fonts.scss */
 .icon-sparkbox:before {
   content: "\e001"; }
 
-/* line 64, ../scss/_fonts.scss */
+/* line 66, ../scss/_fonts.scss */
 .icon-twitter:before {
   content: "\e002"; }
+
+/* line 69, ../scss/_fonts.scss */
+.icon-box-end:before {
+  content: "\e004"; }
+
+/* line 72, ../scss/_fonts.scss */
+.icon-box-end-2:before {
+  content: "\e003"; }
+
+/* line 75, ../scss/_fonts.scss */
+.icon-video:before {
+  content: "\e005"; }
+
+/* line 78, ../scss/_fonts.scss */
+.icon-photo:before {
+  content: "\e006"; }
 
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -259,7 +277,7 @@ figure {
  */
 /* line 245, ../scss/_normalize.scss */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -411,7 +429,7 @@ table {
 /* line 19, ../scss/_common.scss */
 body {
   background: url(/img/sd/background.jpg);
-  font-family: "museo-slab", serif;
+  font-family: 'museo-slab', serif;
   margin: 0;
   padding: 0; }
 
@@ -450,6 +468,9 @@ article {
   padding-bottom: 1.5rem;
   text-align: center; }
   /* line 8, ../scss/_listing.scss */
+  article:nth-child(2n) {
+    clear: left; }
+  /* line 12, ../scss/_listing.scss */
   article h1 {
     background: #e0562f;
     color: white;
@@ -473,7 +494,7 @@ article {
       font-weight: normal;
       line-height: 1;
       position: absolute;
-      top: 0;
+      top: -1px;
       -webkit-font-smoothing: none; }
     /* line 54, ../scss/_mixins.scss */
     article h1:after {
@@ -482,15 +503,15 @@ article {
     /* line 58, ../scss/_mixins.scss */
     article h1:before {
       content: "\e003";
-      left: -24.51613px; }
-  /* line 20, ../scss/_listing.scss */
+      left: -23.75px; }
+  /* line 24, ../scss/_listing.scss */
   article time {
     font-size: 25.6px;
     font-size: 1.6rem;
     font-weight: 100;
     display: block;
     margin-top: 10px; }
-  /* line 27, ../scss/_listing.scss */
+  /* line 31, ../scss/_listing.scss */
   article p {
     font-size: 28.8px;
     font-size: 1.8rem;
@@ -498,11 +519,11 @@ article {
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     color: #e0562f; }
 
-/* line 35, ../scss/_listing.scss */
+/* line 39, ../scss/_listing.scss */
 .upcoming article {
   background: white;
   width: 80%; }
-  /* line 39, ../scss/_listing.scss */
+  /* line 43, ../scss/_listing.scss */
   .upcoming article h1 {
     -webkit-transform: translate(0, -20px);
     -moz-transform: translate(0, -20px);
@@ -510,7 +531,7 @@ article {
     -o-transform: translate(0, -20px);
     transform: translate(0, -20px);
     text-transform: uppercase; }
-  /* line 44, ../scss/_listing.scss */
+  /* line 48, ../scss/_listing.scss */
   .upcoming article:first-child {
     background: transparent url(/img/sd/grid.png);
     -webkit-box-shadow: 0px 0px 5px #333333;
@@ -519,22 +540,23 @@ article {
     margin: 0px 0px 48px 0px;
     margin: 0rem 0rem 3rem 0rem;
     width: 100%; }
-    /* line 50, ../scss/_listing.scss */
+    /* line 54, ../scss/_listing.scss */
     .upcoming article:first-child h1 {
       background: #231f20;
       border-color: #231f20;
       width: 240px; }
-      /* line 55, ../scss/_listing.scss */
+      /* line 59, ../scss/_listing.scss */
       .upcoming article:first-child h1:before, .upcoming article:first-child h1:after {
-        color: #231f20; }
+        color: #231f20;
+        top: -1px; }
 
-/* line 63, ../scss/_listing.scss */
+/* line 68, ../scss/_listing.scss */
 .past {
   background: rgba(0, 0, 0, 0.12);
   float: left;
   clear: left;
   width: 100%; }
-  /* line 69, ../scss/_listing.scss */
+  /* line 74, ../scss/_listing.scss */
   .past h1 {
     background: #7d7d7d;
     color: white;
@@ -562,7 +584,7 @@ article {
       font-weight: normal;
       line-height: 1;
       position: absolute;
-      top: 0;
+      top: -1px;
       -webkit-font-smoothing: none; }
     /* line 54, ../scss/_mixins.scss */
     .past h1:after {
@@ -571,37 +593,53 @@ article {
     /* line 58, ../scss/_mixins.scss */
     .past h1:before {
       content: "\e003";
-      left: -12.90323px; }
-  /* line 81, ../scss/_listing.scss */
-  .past article {
-    border-bottom: 1px solid #7d7d7d;
-    padding-bottom: 48px;
-    padding-bottom: 3rem; }
+      left: -12.5px; }
     /* line 85, ../scss/_listing.scss */
+    .past h1:before, .past h1:after {
+      top: -.5px; }
+  /* line 90, ../scss/_listing.scss */
+  .past article {
+    border-top: 1px solid #7d7d7d;
+    padding-bottom: 16px;
+    padding-bottom: 1rem;
+    margin-bottom: 0; }
+    /* line 95, ../scss/_listing.scss */
+    .past article:nth-child(2) {
+      border-top: none; }
+    /* line 99, ../scss/_listing.scss */
     .past article:last-child {
-      border: none;
       margin-bottom: 0; }
-    /* line 90, ../scss/_listing.scss */
+    /* line 103, ../scss/_listing.scss */
     .past article time, .past article p, .past article a {
       color: #231f20; }
+    /* line 107, ../scss/_listing.scss */
+    .past article .media-link {
+      text-decoration: none; }
+      /* line 110, ../scss/_listing.scss */
+      .past article .media-link:before {
+        color: #7d7d7d;
+        position: relative;
+        left: -6px; }
 
 @media (min-width: 40em) {
-  /* line 99, ../scss/_listing.scss */
+  /* line 122, ../scss/_listing.scss */
   .upcoming article {
     border: none;
     float: left;
     margin: 50px 5%;
     width: 40%; }
 
-  /* line 108, ../scss/_listing.scss */
+  /* line 131, ../scss/_listing.scss */
   .past article {
     border-bottom: none;
     float: left;
-    margin: 50px 0;
-    padding-right: 5%;
-    padding-left: 5%;
+    margin: 0;
+    padding: 0 5%;
     width: 50%; }
-    /* line 116, ../scss/_listing.scss */
+    /* line 138, ../scss/_listing.scss */
+    .past article:nth-child(2), .past article:nth-child(3) {
+      border-top: none; }
+    /* line 142, ../scss/_listing.scss */
     .past article:nth-child(2n) {
       border-right: 1px solid #7d7d7d; } }
 /* line 2, ../scss/_footer.scss */
@@ -623,28 +661,24 @@ footer {
     font-size: 25.6px;
     font-size: 1.6rem;
     font-weight: 100; }
-  /* line 23, ../scss/_footer.scss */
-  footer .icon-twitter,
-  footer .icon-github,
-  footer .icon-sparkbox {
+  /* line 21, ../scss/_footer.scss */
+  footer [data-icon] {
     text-decoration: none; }
-    /* line 26, ../scss/_footer.scss */
-    footer .icon-twitter:before,
-    footer .icon-github:before,
-    footer .icon-sparkbox:before {
+    /* line 24, ../scss/_footer.scss */
+    footer [data-icon]:before {
       color: #e0562f;
       display: inline-block;
       font-size: 45px;
       margin: 10px 10px 0; }
 
-/* line 35, ../scss/_footer.scss */
+/* line 33, ../scss/_footer.scss */
 .vcard {
   font-size: 25.6px;
   font-size: 1.6rem;
   font-weight: 100;
   color: #e0562f; }
 
-/* line 41, ../scss/_footer.scss */
+/* line 39, ../scss/_footer.scss */
 .map {
   width: 100%;
   min-height: 35%;
@@ -652,7 +686,7 @@ footer {
   margin-bottom: 4rem; }
 
 @media (min-width: 40em) {
-  /* line 50, ../scss/_footer.scss */
+  /* line 48, ../scss/_footer.scss */
   footer .column {
     float: left;
     padding: 0 5%;

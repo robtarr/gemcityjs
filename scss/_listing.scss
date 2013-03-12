@@ -5,6 +5,10 @@
     @include rem( padding-bottom, 1.5 );
     text-align: center;
     
+    &:nth-child(2n) {
+      clear: left; 
+    }
+    
     h1 {
       background: $articleHeadingBackground;
       color: $articleHeadingText;
@@ -54,6 +58,7 @@
           
           &:before, &:after {
             color: $nextMeetingHeadingBackground;
+            top: -1px;
           }
         }
       }
@@ -76,19 +81,37 @@
       width: 209px;
       @include transform( translate( 0, -10px ) );
       @include pointy-box( 20px, $prevMeetingHeadingBackground );
+      
+      &:before, &:after {
+        top: -.5px;
+      }
     }
     
     article {
-      border-bottom: 1px solid $prevMeetingBorder;
-      @include rem( padding-bottom, 3 );
+      border-top: 1px solid $prevMeetingBorder;
+      @include rem( padding-bottom, 1 );
+      margin-bottom: 0;
 
+      &:nth-child(2) {
+        border-top: none;
+      }
+      
       &:last-child {
-        border: none;
         margin-bottom: 0;
       }
 
       time, p, a {
         color: $prevMeetingText;
+      }
+      
+      .media-link {
+        text-decoration: none;
+        
+        &:before {
+          color: $mediaLinkIcon;
+          position: relative;
+          left: -6px;
+        }
       }
     }
   }
@@ -108,10 +131,13 @@
     article {
       border-bottom: none;
       float: left;
-      margin: 50px 0;
-      padding-right: 5%;
-      padding-left: 5%;
+      margin: 0;
+      padding: 0 5%;
       width: 50%;
+      
+      &:nth-child(2), &:nth-child(3) {
+        border-top: none;
+      }
       
       &:nth-child(2n) {
         border-right: 1px solid $prevMeetingBorder;

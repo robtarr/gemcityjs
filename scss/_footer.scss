@@ -18,9 +18,7 @@
       font-weight: 100;
     }
     
-    .icon-twitter,
-    .icon-github,
-    .icon-sparkbox {
+    [data-icon] {
       text-decoration: none;
           
       &:before {
