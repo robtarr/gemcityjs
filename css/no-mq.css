@@ -5,19 +5,22 @@
   margin: 50px 5%;
   width: 40%; }
 
-/* line 131, ../scss/_listing.scss */
-.past article {
-  border-bottom: none;
-  float: left;
-  margin: 0;
-  padding: 0 5%;
-  width: 50%; }
-  /* line 138, ../scss/_listing.scss */
-  .past article:nth-child(2), .past article:nth-child(3) {
-    border-top: none; }
-  /* line 142, ../scss/_listing.scss */
-  .past article:nth-child(2n) {
-    border-right: 1px solid #7d7d7d; }
+/* line 130, ../scss/_listing.scss */
+.past {
+  padding: 0 5% 5%; }
+  /* line 133, ../scss/_listing.scss */
+  .past article {
+    border-bottom: none;
+    float: left;
+    margin: 0;
+    padding: 0 5% 20px;
+    width: 50%; }
+    /* line 140, ../scss/_listing.scss */
+    .past article:nth-child(2), .past article:nth-child(3) {
+      border-top: none; }
+    /* line 144, ../scss/_listing.scss */
+    .past article:nth-child(2n) {
+      border-right: 1px solid #7d7d7d; }
 
 /* line 48, ../scss/_footer.scss */
 footer .column {
